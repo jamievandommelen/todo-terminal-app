@@ -1,8 +1,13 @@
 # require 'SQlite3'
 to_do_list = []
 while true 
+  system "clear"
   puts "To Do List:"
-  p to_do_list
+  
+  to_do_list.each_with_index do |task,index|
+    puts "#{index + 1}. #{task}"
+  end
+
   puts "Options:"
   puts " A. Add a new task ➕"
   puts " B. Toggle Task Completion ✔️"
